@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="pedagog.PedagogViewController">
+    <children>
+        <StackPane>
+            <children>
+                <GridPane alignment="CENTER" >
+                        <Button id="showMessages" fx:id="showMessages" alignment="CENTER" text="Inbox"  GridPane.columnIndex="0"/>
+                        <Button id="editProfile" fx:id="editProfile" alignment="CENTER" text="Profile" GridPane.columnIndex="1"/>
+                        <Button id="showCourses" fx:id="showCourses" alignment="CENTER" text="Lista e Kurseve" GridPane.columnIndex="2"/>
+                        <Button id="logoutButton" fx:id="logoutButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Logout" StackPane.alignment="CENTER_RIGHT" GridPane.columnIndex="3"/>
+                </GridPane>
+            </children>
+        </StackPane>
+    </children>
+</StackPane>

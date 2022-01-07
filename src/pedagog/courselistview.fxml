@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pedagog.PamjaKurseve">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+
+    <TableView fx:id="tableView" prefWidth="500" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <columns>
+            <TableColumn fx:id="courseNameColumn" prefWidth="200" text="Emri i Kursit">
+                <cellValueFactory>
+                    <PropertyValueFactory property="courseName" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <items>
+            <FXCollections fx:factory="observableArrayList" />
+        </items>
+        <sortOrder>
+            <fx:reference source="courseNameColumn" />
+        </sortOrder>
+    </TableView>
+
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Button id="loginButton" fx:id="backButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Menu" />
+        <TextField fx:id="courseNameField" prefWidth="300" promptText="Kursi" />
+        <Button onAction="#saveButton" text="Save" />
+    </HBox>
+    <Label fx:id="errorLabel" textFill="red" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <StackPane GridPane.columnIndex="0" GridPane.rowIndex="4" />
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

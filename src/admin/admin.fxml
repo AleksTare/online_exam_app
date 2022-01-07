@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.PamjaAdmin">
+    <children>
+        <StackPane alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" spacing="10.0">
+                            <children>
+                                <Button id="showStudents" fx:id="shfaqStudent" alignment="CENTER" text="Lista Studenteve" />
+                                <Button id="showPedagog" fx:id="shfaqPedagog" alignment="CENTER" text="Lista Pedagogeve" />
+                                <Button id="logoutButton" fx:id="butonLogout" alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Logout" StackPane.alignment="CENTER_RIGHT" />
+                            </children>
+                </HBox>
+            </children>
+        </StackPane>
+    </children>
+</StackPane>

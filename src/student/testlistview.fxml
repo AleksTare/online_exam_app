@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.TestListView">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+
+    <TableView fx:id="testTableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <columns>
+            <TableColumn fx:id="testNameColumn" prefWidth="100" text="Emri i Testit">
+                <cellValueFactory>
+                    <PropertyValueFactory property="description" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <items>
+            <FXCollections fx:factory="observableArrayList" />
+        </items>
+        <sortOrder>
+            <fx:reference source="testNameColumn" />
+        </sortOrder>
+    </TableView>
+
+    <TableView fx:id="questionTableView" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columns>
+            <TableColumn fx:id="questionText" prefWidth="100" text="Pyetja">
+                <cellValueFactory>
+                    <PropertyValueFactory property="questionText" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <items>
+            <FXCollections fx:factory="observableArrayList" />
+        </items>
+        <sortOrder>
+            <fx:reference source="testNameColumn" />
+        </sortOrder>
+    </TableView>
+
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Button fx:id="finishTestButton" onAction="#finishTest" text="Save Test" />
+    </HBox>
+    <Label fx:id="errorLabel" textFill="red" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <StackPane GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+        <Button id="loginButton" fx:id="backButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Menu" StackPane.alignment="CENTER" />
+    </StackPane>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
